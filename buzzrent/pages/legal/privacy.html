@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Buzzrent — Mobile Bee Hotels for Pollination</title>
+    <meta name="description" content="Read the privacy policy for Buzzrent's mobile bee hotel services.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="YOUR_PRIVACY_POLICY_URL">
+    <meta property="og:title" content="Privacy Policy | Buzzrent — Mobile Bee Hotels for Pollination">
+    <meta property="og:description" content="Read the privacy policy for Buzzrent's mobile bee hotel services.">
+    <meta property="og:image" content="YOUR_OG_IMAGE_URL">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="YOUR_PRIVACY_POLICY_URL">
+    <meta property="twitter:title" content="Privacy Policy | Buzzrent — Mobile Bee Hotels for Pollination">
+    <meta property="twitter:description" content="Read the privacy policy for Buzzrent's mobile bee hotel services.">
+    <meta property="twitter:image" content="YOUR_OG_IMAGE_URL">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <!-- Optional: Self-hosted fonts -->
+    <!-- <link rel="preload" href="../assets/fonts/inter-variable-subset.woff2" as="font" type="font/woff2" crossorigin> -->
+</head>
+<body>
+
+    <header>
+        <!-- Placeholder for shared navigation component -->
+        <div data-include="components/nav.html"></div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p>This is the content area for the privacy policy. Add your privacy policy text here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Placeholder for shared footer component -->
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <!-- Optional: Include other scripts if needed for this page -->
+    <script>
+        // Basic include functionality (for static sites)
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("data-include");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("data-include");
+                  includeHTML();
+                }
+              }
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        includeHTML();
+    </script>
+
+</body>
+</html>
