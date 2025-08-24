@@ -1,0 +1,50 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: sans-serif; /* Example font-family */
+}
+
+/* Variables */
+:root {
+  /* Color palette */
+  --primary-color: #007bff; /* Example primary color */
+  --secondary-color: #6c757d; /* Example secondary color */
+  --text-color: #333; /* Example text color */
+  --background-color: #fff; /* Example background color */
+
+  /* Typography */
+  --font-family-sans-serif: sans-serif; /* Example font-family */
+  --font-size-base: 1rem; /* Example base font size */
+  --line-height-base: 1.5; /* Example base line height */
+
+  /* Spacing */
+  --spacing-unit: 1rem; /* Example spacing unit */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing-unit) / 2);
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-unit);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

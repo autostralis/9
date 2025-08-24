@@ -1,0 +1,70 @@
+export const metadata = { title: "Contact | Buzzrent" };
+
+export default function Page() {
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-12">
+      <div dangerouslySetInnerHTML={{ __html: `
+
+    <!-- Header Placeholder -->
+    <header>
+        <!-- Include content from components/nav.html -->
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <!-- Contact form placeholder -->
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state">
+                </div>
+                <div class="form-group">
+                    <label for="crop">Crop:</label>
+                    <input type="text" id="crop" name="crop">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+
+                <!-- Firebase logic for Firestore connection will be added here -->
+                <script>
+                    // Add Firebase SDK scripts here
+                    // Add JavaScript to handle form submission and send data to Firestore here
+                </script>
+            </form>
+                <!-- Form elements go here -->
+            </div>
+            <!-- Address and WhatsApp/phone placeholder -->
+            <div class="contact-info">
+                <!-- Address, phone, WhatsApp link go here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer>
+        <!-- Include content from components/footer.html -->
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/contact.js"></script>
+    <script src="../assets/js/firebase-init.js"></script>
+` }} />
+    </section>
+  );
+}
